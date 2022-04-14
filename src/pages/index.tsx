@@ -1,9 +1,10 @@
 import Button from "@mui/material/Button"
+import Layout from "../components/Layout"
 
 export default function Home() {
   return (
-    <div>
+    <Layout title="Youtube">
       <Button variant="outlined" color="secondary">Outlined</Button>
-    </div>
+    </Layout>
   )
 }
