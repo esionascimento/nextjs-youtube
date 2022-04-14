@@ -21,7 +21,8 @@
         "quotes": ["error", "double"],
         "semi": ["error", "never"],
         "space-in-parens": ["error", "never"],
-        "no-trailing-spaces": [2, { "skipBlankLines": false }]
+        "no-trailing-spaces": [2, { "skipBlankLines": false }],
+        "react/prop-types": "off"
     },
     "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
   }
