@@ -1,0 +1,27 @@
+{
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": ["./tsconfig.json"] },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "@typescript-eslint/strict-boolean-expressions": [
+            2,
+            {
+                "allowString" : false,
+                "allowNumber" : false
+            }
+        ],
+        "indent": ["error", 2],
+        "quotes": ["error", "double"],
+        "semi": ["error", "never"],
+        "space-in-parens": ["error", "never"],
+        "no-trailing-spaces": [2, { "skipBlankLines": false }]
+    },
+    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+  }
