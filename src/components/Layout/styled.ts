@@ -9,24 +9,25 @@ export const StatWrapper = styled("div")(
   width: 100vw;
 `)
 
-export const wrapper = styled("div")(
+export const Wrapper = styled("div")(
   ({ theme }) => `
   display: flex;
   flex: 1 1 auto;
   overflow: hidden;
-  paddingTop: 64,
-  [${theme.breakpoints.up("lg")}]: {
-    paddingLeft: 256
+  padding-top: 64;
+  padding-left: 256;
+  ${theme.breakpoints.up("lg")}: {
+    border: 2px solid red;
   }
 `)
 
-export const contentContainer = styled("div")`
+export const ContentContainer = styled("div")`
   display: flex;
   flex: 1 1 auto;
-  overflow: hidden
+  overflow: hidden;
 `
-export const content = styled("div")`
+export const Content = styled("div")`
   flex: 1 1 auto;
-  height: 100 %;
+  height: 100%;
   overflow: auto;
 `
