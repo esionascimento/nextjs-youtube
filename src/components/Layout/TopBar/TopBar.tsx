@@ -6,7 +6,7 @@ import {
   Apps as AppsIcon,
   MoreVert as MoreVertIcon,
   AccountCircle,
-  KeyboardVoice as KeyboardVoiceIcon
+  KeyboardVoice as KeyboardVoiceIcon,
 } from "@mui/icons-material"
 
 const SAppBar = styled(AppBar)(({ theme }) => ({
@@ -40,7 +40,11 @@ const TopBar = () => {
           <MenuIcon />
           <SImg src="./new-youtube-logo.svg" alt="logo" />
         </Box>
-        <Box alignItems="center" margin="0 5px" sx={{ display: { xs: 'none', sm: 'flex' } }}>
+        <Box
+          alignItems="center"
+          margin="0 5px"
+          sx={{ display: { xs: "none", sm: "flex" } }}
+        >
           <Paper
             component="form"
             sx={{
@@ -84,7 +88,7 @@ const TopBar = () => {
           </Button>
         </Box>
       </SToolbar>
-    </SAppBar >
+    </SAppBar>
   )
 }
 

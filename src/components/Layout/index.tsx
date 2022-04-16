@@ -2,10 +2,12 @@ import React, { FC } from "react"
 import Head from "next/head"
 import { styled } from "@mui/material/styles"
 import TopBar from "./TopBar/TopBar"
+import NavBar from "./NavBar/NavBar"
 
 interface Props {
-  children: any;
-  title: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any
+  title: string
 }
 
 const Root = styled("div")(({ theme }) => ({
@@ -48,7 +50,7 @@ const Layout: FC<Props> = ({ children, title }) => {
       </Head>
       <Root>
         <TopBar />
-        <div>Navbar</div>
+        <NavBar />
         <Wrapper>
           <ContentContainer>
             <Content>{children}</Content>
