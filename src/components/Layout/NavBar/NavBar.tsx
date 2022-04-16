@@ -35,7 +35,7 @@ const SlistItem = styled(ListItem)({
 
 // using
 const SdesktopDrawer = styled(Drawer)({
-  width: "290px",
+  width: "230px",
   top: "56px",
   height: "calc(100% - 56px)",
   borderRight: "none"
