@@ -13,6 +13,7 @@ import {
   Typography,
   Button,
   SvgIconTypeMap,
+  ListItemButton,
 } from "@mui/material"
 import {
   Subscriptions,
@@ -27,22 +28,30 @@ import { useSession } from "next-auth/react"
 import { OverridableComponent } from "@mui/material/OverridableComponent"
 import { primaryMenu, secondaryManu } from "./Options"
 
-const SlistItem = styled(ListItem)(({ theme }) => ({
-  paddingTop: 6,
-  paddingBottom: 6,
-  paddingLeft: theme.spacing(3),
-}))
+const SlistItem = styled(ListItem)({
+  paddingTop: 5,
+  paddingBottom: 5,
+})
 
+// using
 const SdesktopDrawer = styled(Drawer)({
-  display: "240px",
+  width: "290px",
   top: "56px",
-  height: "calc(100% - 64px)",
+  height: "calc(100% - 56px)",
   borderRight: "none",
 })
 
+//using
 const SBox = styled(Box)({
+  width: "230px",
   marginTop: "56px",
 })
+
+const SListItemButton = styled(ListItemButton)(({ theme }) => ({
+  paddingTop: 1,
+  paddingBottom: 1,
+  paddingLeft: theme.spacing(1),
+}))
 
 /* const Savatar = styled(Avatar)({
   cursor: "pointer",
@@ -50,8 +59,11 @@ const SBox = styled(Box)({
   height: 24,
 }) */
 
+//using
 const SlistItemText = styled(ListItemText)({
-  fontSize: 14,
+  "& .MuiListItemText-primary": {
+    fontSize: 14,
+  },
 })
 
 const NavBar = () => {
@@ -78,19 +90,20 @@ const NavBar = () => {
     name?: string
   }) => router.pathname === item.path
 
-  console.log("primaryMenu :", primaryMenu)
   const content = (
     <SBox height="100%" display="flex" flexDirection="column">
       <List>
         {primaryMenu.map((item) => {
           const Icon = item.icon
           return (
-            <ListItem key={item.id} button selected={isSelected(item)}>
-              <ListItemIcon>
-                <Icon style={{ color: isSelected(item) ? "#f44336" : "#6B6C6D" }} />
-              </ListItemIcon>
-              <SlistItemText primary={item.label} />
-            </ListItem>
+            <SListItemButton key={item.id} selected={isSelected(item)}>
+              <SlistItem>
+                <ListItemIcon>
+                  <Icon style={{ color: isSelected(item) ? "#f44336" : "#6B6C6D" }} />
+                </ListItemIcon>
+                <SlistItemText primary={item.label} />
+              </SlistItem>
+            </SListItemButton>
           )
         })}
       </List>
@@ -99,16 +112,28 @@ const NavBar = () => {
         {secondaryManu.map((item) => {
           const Icon = item.icon
           return (
-            <ListItem key={item.id} button selected={isSelected(item)}>
-              <ListItemIcon>
-                <Icon style={{ color: isSelected(item) ? "#f44336" : "#6B6C6D" }} />
-              </ListItemIcon>
-              <SlistItemText primary={item.label} />
-            </ListItem>
+            <SListItemButton>
+              <SlistItem key={item.id} selected={isSelected(item)}>
+                <ListItemIcon>
+                  <Icon style={{ color: isSelected(item) ? "#f44336" : "#6B6C6D" }} />
+                </ListItemIcon>
+                <SlistItemText primary={item.label} />
+              </SlistItem>
+            </SListItemButton>
           )
         })}
       </List>
       <Divider />
+      <Box mx={4} my={2}>
+        <Typography variant="body2">
+          Faça login para curtir vídeos, comentar e se inscrever.
+        </Typography>
+        <Box mt={2}>
+          <Button variant="outlined" color="secondary" startIcon={<AccountCircle />}>
+            Fazer login
+          </Button>
+        </Box>
+      </Box>
       {/* <Box>
         {!status ? (
           <Box mx={4} my={2}>

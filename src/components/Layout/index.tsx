@@ -22,7 +22,7 @@ const Wrapper = styled("div")(({ theme }) => ({
   display: "flex",
   flex: "1 1 auto",
   overflow: "hidden",
-  paddingTop: 64,
+  paddingTop: 56,
   [theme.breakpoints.up("md")]: {
     paddingLeft: 256,
   },

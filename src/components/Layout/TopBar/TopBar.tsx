@@ -13,11 +13,14 @@ const SAppBar = styled(AppBar)(({ theme }) => ({
   boxShadow: "none",
   zIndex: theme.zIndex.drawer + 1,
   backgroundColor: theme.palette.background.default,
+  ".css-1pcbcjz-MuiToolbar-root": {
+    minHeight: 56,
+  },
 }))
 
 const SToolbar = styled(Toolbar)({
   display: "flex",
-  minHeight: 56,
+  height: 56,
   alignItems: "center",
   justifyContent: "space-between",
 })
@@ -58,7 +61,7 @@ const TopBar = () => {
                 lg: 700, // theme.breakpoints.up('lg')
                 xl: 700, // theme.breakpoints.up('xl')
               },
-              height: 35,
+              height: 30,
             }}
           >
             <SInput

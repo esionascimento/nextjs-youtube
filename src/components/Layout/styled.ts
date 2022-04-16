@@ -7,7 +7,8 @@ export const StatWrapper = styled("div")(
   height: 100vh;
   overflow: hidden;
   width: 100vw;
-`)
+`
+)
 
 export const Wrapper = styled("div")(
   ({ theme }) => `
@@ -19,7 +20,8 @@ export const Wrapper = styled("div")(
   ${theme.breakpoints.up("lg")}: {
     border: 2px solid red;
   }
-`)
+`
+)
 
 export const ContentContainer = styled("div")`
   display: flex;
