@@ -1,8 +1,8 @@
 import React, { FC } from "react"
 import Head from "next/head"
 import { styled } from "@mui/material/styles"
-import TopBar from "./TopBar/TopBar"
-import NavBar from "./NavBar/NavBar"
+import TopBar from "src/components/Layout/TopBar/TopBar"
+import NavBar from "src/components/Layout/NavBar/NavBar"
 
 interface Props {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -24,7 +24,7 @@ const Wrapper = styled("div")(({ theme }) => ({
   overflow: "hidden",
   paddingTop: 56,
   [theme.breakpoints.up("md")]: {
-    paddingLeft: 256
+    paddingLeft: 20
   }
 }))
 
