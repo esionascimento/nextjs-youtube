@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import Head from "next/head"
 import { styled } from "@mui/material/styles"
+import TopBar from "./TopBar"
 
 interface Props {
   children: any;
@@ -8,7 +9,7 @@ interface Props {
 }
 
 const Root = styled("div")(({ theme }) => ({
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: theme.palette.background.paper,
   display: "flex",
   height: "100vh",
   overflow: "hidden",
@@ -46,9 +47,7 @@ const Layout: FC<Props> = ({ children, title }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Root>
-        <div>
-          Topbar
-        </div>
+        <TopBar />
         <div>Navbar</div>
         <Wrapper>
           <ContentContainer>
