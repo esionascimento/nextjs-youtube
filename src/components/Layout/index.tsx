@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import Head from "next/head"
 import { styled } from "@mui/material/styles"
-import TopBar from "./TopBar"
+import TopBar from "./TopBar/TopBar"
 
 interface Props {
   children: any;

@@ -2,10 +2,15 @@
     "root": true,
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": { "project": ["./tsconfig.json"] },
+    "parserOptions": {
+        "project": [
+            "./tsconfig.json"
+        ]
+    },
     "plugins": [
         "@typescript-eslint"
     ],
@@ -13,16 +18,36 @@
         "@typescript-eslint/strict-boolean-expressions": [
             2,
             {
-                "allowString" : false,
-                "allowNumber" : false
+                "allowString": false,
+                "allowNumber": false
             }
         ],
-        "indent": ["error", 2],
-        "quotes": ["error", "double"],
-        "semi": ["error", "never"],
-        "space-in-parens": ["error", "never"],
-        "no-trailing-spaces": [2, { "skipBlankLines": false }],
+        "indent": [
+            "error",
+            2
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "no-trailing-spaces": [
+            2,
+            {
+                "skipBlankLines": false
+            }
+        ],
         "react/prop-types": "off"
     },
-    "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
-  }
+    "ignorePatterns": [
+        "src/**/*.test.ts",
+        "src/frontend/generated/*"
+    ]
+}
