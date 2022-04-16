@@ -15,7 +15,7 @@ const Root = styled("div")(({ theme }) => ({
   display: "flex",
   height: "100vh",
   overflow: "hidden",
-  width: "100vw",
+  width: "100vw"
 }))
 
 const Wrapper = styled("div")(({ theme }) => ({
@@ -24,20 +24,20 @@ const Wrapper = styled("div")(({ theme }) => ({
   overflow: "hidden",
   paddingTop: 56,
   [theme.breakpoints.up("md")]: {
-    paddingLeft: 256,
-  },
+    paddingLeft: 256
+  }
 }))
 
 const ContentContainer = styled("div")({
   display: "flex",
   flex: "1 1 auto",
-  overflow: "hidden",
+  overflow: "hidden"
 })
 
 const Content = styled("div")({
   flex: "1 1 auto",
   height: "100%",
-  overflow: "auto",
+  overflow: "auto"
 })
 
 const Layout: FC<Props> = ({ children, title }) => {

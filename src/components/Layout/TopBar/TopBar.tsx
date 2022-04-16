@@ -6,7 +6,7 @@ import {
   Apps as AppsIcon,
   MoreVert as MoreVertIcon,
   AccountCircle,
-  KeyboardVoice as KeyboardVoiceIcon,
+  KeyboardVoice as KeyboardVoiceIcon
 } from "@mui/icons-material"
 
 const SAppBar = styled(AppBar)(({ theme }) => ({
@@ -14,25 +14,25 @@ const SAppBar = styled(AppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
   backgroundColor: theme.palette.background.default,
   ".css-1pcbcjz-MuiToolbar-root": {
-    minHeight: 56,
-  },
+    minHeight: 56
+  }
 }))
 
 const SToolbar = styled(Toolbar)({
   display: "flex",
   height: 56,
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "space-between"
 })
 
 const SImg = styled("img")(({ theme }) => ({
   cursor: "pointer",
   height: 18,
-  marginLeft: theme.spacing(3),
+  marginLeft: theme.spacing(3)
 }))
 
 const SInput = styled(InputBase)({
-  flex: 1,
+  flex: 1
 })
 
 const TopBar = () => {
@@ -59,9 +59,9 @@ const TopBar = () => {
                 sm: "auto", // theme.breakpoints.up('sm')
                 md: 450, // theme.breakpoints.up('md')
                 lg: 700, // theme.breakpoints.up('lg')
-                xl: 700, // theme.breakpoints.up('xl')
+                xl: 700 // theme.breakpoints.up('xl')
               },
-              height: 30,
+              height: 30
             }}
           >
             <SInput

@@ -13,7 +13,7 @@ import {
   Typography,
   Button,
   SvgIconTypeMap,
-  ListItemButton,
+  ListItemButton
 } from "@mui/material"
 import {
   Subscriptions,
@@ -21,7 +21,7 @@ import {
   Whatshot,
   VideoLibrary,
   History,
-  AccountCircle,
+  AccountCircle
 } from "@mui/icons-material"
 import { styled } from "@mui/material/styles"
 import { useSession } from "next-auth/react"
@@ -30,7 +30,7 @@ import { primaryMenu, secondaryManu } from "./Options"
 
 const SlistItem = styled(ListItem)({
   paddingTop: 5,
-  paddingBottom: 5,
+  paddingBottom: 5
 })
 
 // using
@@ -38,19 +38,20 @@ const SdesktopDrawer = styled(Drawer)({
   width: "290px",
   top: "56px",
   height: "calc(100% - 56px)",
-  borderRight: "none",
+  borderRight: "none"
 })
 
 //using
-const SBox = styled(Box)({
+const SBox = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.background.default,
   width: "230px",
-  marginTop: "56px",
-})
+  marginTop: "56px"
+}))
 
 const SListItemButton = styled(ListItemButton)(({ theme }) => ({
   paddingTop: 1,
   paddingBottom: 1,
-  paddingLeft: theme.spacing(1),
+  paddingLeft: theme.spacing(1)
 }))
 
 /* const Savatar = styled(Avatar)({
@@ -62,8 +63,8 @@ const SListItemButton = styled(ListItemButton)(({ theme }) => ({
 //using
 const SlistItemText = styled(ListItemText)({
   "& .MuiListItemText-primary": {
-    fontSize: 14,
-  },
+    fontSize: 14
+  }
 })
 
 const NavBar = () => {
@@ -78,7 +79,7 @@ const NavBar = () => {
     { id: 5, name: "Canal 5" },
     { id: 6, name: "Canal 6" },
     { id: 7, name: "Canal 7" },
-    { id: 8, name: "Canal 8" },
+    { id: 8, name: "Canal 8" }
   ])
 
   const isSelected = (item: {
