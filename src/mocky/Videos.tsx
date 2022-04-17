@@ -6,7 +6,7 @@ export const dataMocky = [
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 11,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
@@ -17,7 +17,7 @@ export const dataMocky = [
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 22,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
@@ -28,7 +28,7 @@ export const dataMocky = [
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 33,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
@@ -39,7 +39,7 @@ export const dataMocky = [
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 44,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
@@ -50,29 +50,29 @@ export const dataMocky = [
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 44,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
   {
     id: 6,
-    title: "Modulo 04",
+    title: "Modulo 06",
     authorId: 2,
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 44,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   },
   {
     id: 7,
-    title: "Modulo 04",
+    title: "Modulo 07",
     authorId: 2,
     authorName: "Lucas Silveira",
     authorAvatar: "avatarUrl",
     views: 44,
-    thumb: "/thumbs/next1",
+    thumb: "/thumbs/next04.webp",
     videoUrl: "url",
     updateAt: new Date()
   }
