@@ -2,6 +2,7 @@ import { Box, Avatar, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 import dayjs from "dayjs"
 import relativeTime from "dayjs/plugin/relativeTime"
+import Image from "next/image"
 
 dayjs.extend(relativeTime)
 
@@ -13,10 +14,11 @@ const STypography = styled(Typography)({
   overflow: "hidden"
 })
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const VideoCard = ({ item }: { item: any }) => {
   return (
     <Box>
-      <img alt={item.title} src={item.thumb} />
+      <Image alt={item.title} src={item.thumb} width={250} height={150} />
       <Box display="flex" marginTop="1" margin="0" padding="0">
         <Box>
           <Avatar alt={item.authorName} src={item.authorAvatar}>
