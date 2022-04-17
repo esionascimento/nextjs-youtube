@@ -4,6 +4,7 @@ import VideoCard from "src/components/Layout/VideoCard"
 import { dataMocky } from "src/mocky/Videos"
 import Layout from "src/components/Layout/index"
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Home = ({ data }: { data: any }) => {
   return (
     <Layout title="Youtube">

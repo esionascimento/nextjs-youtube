@@ -7,8 +7,8 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
-  Avatar,
+  /* ListSubheader,
+  Avatar, */
   Divider,
   Typography,
   Button,
@@ -16,15 +16,15 @@ import {
   ListItemButton
 } from "@mui/material"
 import {
-  Subscriptions,
+  /* Subscriptions,
   Home as HomeIcon,
   Whatshot,
   VideoLibrary,
-  History,
+  History, */
   AccountCircle
 } from "@mui/icons-material"
 import { styled } from "@mui/material/styles"
-import { useSession } from "next-auth/react"
+/* import { useSession } from "next-auth/react" */
 import { OverridableComponent } from "@mui/material/OverridableComponent"
 import { primaryMenu, secondaryManu } from "./Options"
 
@@ -113,8 +113,8 @@ const NavBar = () => {
         {secondaryManu.map((item) => {
           const Icon = item.icon
           return (
-            <SListItemButton>
-              <SlistItem key={item.id} selected={isSelected(item)}>
+            <SListItemButton key={item.id}>
+              <SlistItem selected={isSelected(item)}>
                 <ListItemIcon>
                   <Icon style={{ color: isSelected(item) ? "#f44336" : "#6B6C6D" }} />
                 </ListItemIcon>
