@@ -3,21 +3,27 @@ import Head from "next/head"
 import { ThemeProvider } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
 import { CacheProvider, EmotionCache } from "@emotion/react"
-import theme from "../theme"
-import createEmotionCache from "./utility/createEmotionCache"
+import theme from "src/theme"
+import createCache from "@emotion/cache"
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache()
+const cache = createCache({
+  key: "css",
+  prepend: true
+})
 
 export default function MyApp(props: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Component: any
   emotionCache?: EmotionCache | undefined
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   pageProps: any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  clientSideEmotionCache: any
 }) {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+  const { Component /* , emotionCache = clientSideEmotionCache */, pageProps } = props
 
   return (
-    <CacheProvider value={emotionCache}>
+    <CacheProvider value={cache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
